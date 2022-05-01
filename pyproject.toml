@@ -5,7 +5,7 @@ description = ""
 authors = ["Paul Matthews <paul@paulmatthews.dev>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8.10"
 fastapi = "^0.75.2"
 uvicorn = "^0.17.6"
 Faker = "^13.6.0"
