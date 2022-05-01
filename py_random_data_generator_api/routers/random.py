@@ -15,7 +15,7 @@ router = APIRouter(prefix="/api/random")
 def remove_file(path):
     remove(path)
 
-@router.get("/users")
+@router.get("/users", tags = ["random"])
 async def get_data_user(data_format="json", amount=10):
     if data_format == "csv":
         filepath = "csvs/temp/{}random-data.csv".format(randint(1000,1000000))
@@ -24,7 +24,7 @@ async def get_data_user(data_format="json", amount=10):
         return FileResponse(filepath, filename="random-users.csv", background=remove_task)
     return get_users_list(int(amount))
 
-@router.get("/sensitive")
+@router.get("/sensitive", tags = ["random"])
 async def get_data_sensitive(data_format="json", amount=10):
     if data_format == "csv":
         filepath = "csvs/temp/{}random-data.csv".format(randint(1000,1000000))
@@ -33,7 +33,7 @@ async def get_data_sensitive(data_format="json", amount=10):
         return FileResponse(filepath, filename="random-sensitive.csv", background=remove_task)
     return get_sensitive_users_list(int(amount))
 
-@router.get("/transactions")
+@router.get("/transactions", tags = ["random"])
 async def get_transaction(data_format="json", amount=10):
     if data_format == "csv":
         filepath = "csvs/temp/{}random-data.csv".format(randint(1000,1000000))
@@ -42,7 +42,7 @@ async def get_transaction(data_format="json", amount=10):
         return FileResponse(filepath, filename="random-transactions.csv", background=remove_task)
     return get_transactions_list(int(amount))
 
-@router.get("/logs")
+@router.get("/logs", tags = ["random"])
 async def get_logs(data_format="json", amount=10):
     if data_format == "csv":
         filepath = "csvs/temp/{}random-data.csv".format(randint(1000,1000000))

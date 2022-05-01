@@ -9,6 +9,7 @@ python = "^3.8.10"
 fastapi = "^0.75.2"
 uvicorn = "^0.17.6"
 Faker = "^13.6.0"
+email-validator = "^1.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
