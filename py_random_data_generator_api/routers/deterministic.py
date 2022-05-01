@@ -12,7 +12,7 @@ def unpack_csv_file(csv_filepath):
             data.append(row)
     return data
 
-router = APIRouter(prefix="/deterministic")
+router = APIRouter(prefix="/api/deterministic")
 
 @router.get("/users")
 async def get_data_user(data_format="json", amount=10):
