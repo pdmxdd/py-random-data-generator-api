@@ -10,7 +10,7 @@ from starlette.background import BackgroundTask
 from py_random_data_generator.py_random_data_generator.generate_random import get_users_list, get_sensitive_users_list, get_transactions_list, get_logs_list
 from py_random_data_generator.py_random_data_generator.random_writer import write_dict_list_to_csv
 
-router = APIRouter(prefix="/random")
+router = APIRouter(prefix="/api/random")
 
 def remove_file(path):
     remove(path)
